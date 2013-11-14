@@ -3,15 +3,13 @@ require "bundler/capistrano"
 
 set :application, "maboo123dance"
 set :user, "andrewc"
-set :bundle_flags, "--no-deployment --quiet"
+
 
 set :scm, :git
-set :repository, "git@github.com:proliberate/blog_app.git"
+set :repository, "git@github.com:proliberate/maboo123dance.git"
 set :branch, "master"
 set :use_sudo, true
-
-set :stages, ["staging", "production"]
-set :default_stage, "staging"
+set :bundle_flags, "--no-deployment --quiet"
 
 
 server "maboo123dance.cloudapp.net", :web, :app, :db, primary: true
